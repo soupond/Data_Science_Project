@@ -26,6 +26,14 @@ A small end‑to‑end data science project demonstrating:
 
 ## Project Structure
 
+````plaintext
+Data_Science_Project/
+├── data/                   # Raw and processed datasets (CSV, JSON, etc.)
+├── scraping/               # Standalone Python scripts (BeautifulSoup, Selenium)
+├── spider/                 # Scrapy project and spider definitions
+├── data_analysis.ipynb     # Jupyter notebook for EDA & visualization
+├── README.md               # Project overview and instructions
+├── requirements.txt        # Python dependencies file
 ```plaintext
 Data_Science_Project/
 ├── data/                   # Raw and processed datasets (CSV, JSON, etc.)
@@ -33,7 +41,7 @@ Data_Science_Project/
 ├── spider/                 # Scrapy project and spider definitions
 ├── data_analysis.ipynb     # Jupyter notebook for EDA & visualization
 └── README.md               # Project overview and instructions
-```
+````
 
 ---
 
@@ -51,6 +59,24 @@ Data_Science_Project/
    ```bash
    git clone https://github.com/soupond/Data_Science_Project.git
    cd Data_Science_Project
+   ```
+
+   > Ensure that `requirements.txt` is located in the root of the project (alongside `README.md`).
+
+   You should see:
+
+   ```plaintext
+   Data_Science_Project/
+   ├── requirements.txt
+   └── README.md
+   ```
+
+   2. **Create and activate a virtual environment** (recommended)
+      `bash`bash
+      git clone [https://github.com/soupond/Data\_Science\_Project.git](https://github.com/soupond/Data_Science_Project.git)
+      cd Data\_Science\_Project
+
+   ```
    ```
 
 2. **Create and activate a virtual environment** (recommended)
@@ -116,26 +142,13 @@ Inside, you’ll find:
 
 ---
 
-## Directory Layout
+## Requirements
 
-```plaintext
-├── data/
-│   ├── raw/                # Original scraped data
-│   └── processed/          # Cleaned and transformed data
-├── scraping/
-│   ├── bs4_scraper.py      # Example BeautifulSoup scraper
-│   └── selenium_scraper.py # Example Selenium-based scraper
-├── spider/
-│   ├── scrapy.cfg
-│   └── spiders/
-│       ├── dubizzle.py
-│       └── bayut.py
-├── data_analysis.ipynb     # Notebook with EDA and charts
-├── requirements.txt        # Python package requirements
-└── README.md               # This file
+A `requirements.txt` file lists all Python package dependencies for this project. Install them with:
+
+```bash
+pip install -r requirements.txt
 ```
-
----
 
 ## Contributing
 
@@ -154,6 +167,4 @@ Please ensure:
 
 ---
 
-## License
 
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
