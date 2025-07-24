@@ -1,0 +1,16 @@
+# Core data analysis
+pandas>=1.2.0
+numpy>=1.19.0
+matplotlib>=3.3.0
+
+# Jupyter notebook support
+jupyter
+
+# Web scraping
+scrapy>=2.5.0
+beautifulsoup4>=4.9.0
+selenium>=3.141.0
+requests>=2.25.0
+
+# (Optional) Additional utilities
+tqdm
