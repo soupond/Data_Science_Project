@@ -26,14 +26,7 @@ A small end‑to‑end data science project demonstrating:
 
 ## Project Structure
 
-````plaintext
-Data_Science_Project/
-├── data/                   # Raw and processed datasets (CSV, JSON, etc.)
-├── scraping/               # Standalone Python scripts (BeautifulSoup, Selenium)
-├── spider/                 # Scrapy project and spider definitions
-├── data_analysis.ipynb     # Jupyter notebook for EDA & visualization
-├── README.md               # Project overview and instructions
-├── requirements.txt        # Python dependencies file
+
 ```plaintext
 Data_Science_Project/
 ├── data/                   # Raw and processed datasets (CSV, JSON, etc.)
@@ -61,15 +54,7 @@ Data_Science_Project/
    cd Data_Science_Project
    ```
 
-   > Ensure that `requirements.txt` is located in the root of the project (alongside `README.md`).
-
-   You should see:
-
-   ```plaintext
-   Data_Science_Project/
-   ├── requirements.txt
-   └── README.md
-   ```
+   
 
    2. **Create and activate a virtual environment** (recommended)
       `bash`bash
@@ -116,14 +101,6 @@ The script will save output files under `data/` (e.g., `data/raw_listings.csv`).
 
 The Scrapy project lives in the `spider/` directory. To crawl and export data:
 
-```bash
-cd spider
-scrapy crawl dubizzle -o ../data/dubizzle_listings.csv
-scrapy crawl bayut    -o ../data/bayut_listings.csv
-```
-
-* Each run generates or overwrites the specified CSV in `data/`.
-* Modify spider settings or add new spiders under `spider/spiders/` as needed.
 
 ### Exploratory Data Analysis
 
