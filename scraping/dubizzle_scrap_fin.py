@@ -126,8 +126,8 @@ def main():
     finally:
         # 6. Save to CSV and quit browser
         df = pd.DataFrame(all_properties)
-        df.to_csv('data/dubizzle_properties_final.csv', index=False)
-        print(f"\nSaved {len(df)} listings to dubizzle_properties.csv")
+        df.to_csv('cleaned_data/dubclean.csv', index=False)
+        print(f"\nSaved {len(df)} listings to clean_data folder")
         driver.quit()
 
 if __name__ == "__main__":

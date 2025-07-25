@@ -15,7 +15,7 @@ print(f"Starting to scrape from: {base_url}")
 # Set up headers to look like a real browser
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-}
+}  # try adding whatsapp user agent to bypass certain firewalls!! 
 
 # Try pages automatically until no more properties found
 page_num = 1
@@ -164,12 +164,7 @@ while True:
 
     print(f"Extracted {len([p for p in all_properties_data if p['Page'] == page_num])} properties from page {page_num}")
     
-    # # TESTING: Stop after 10 properties to check quality
-    # if len(all_properties_data) >= 10:
-    #     print("\n=== STOPPING AFTER 10 PROPERTIES FOR TESTING ===")
-    #     break
-    
-    # Safety limit to prevent infinite loops
+
     if page_num >= 100:  # Max 100 pages
         print("Reached maximum page limit (100). Stopping.")
         break
@@ -182,8 +177,6 @@ print(f"\nScraping completed! Total properties: {len(all_properties_data)}")
 df = pd.DataFrame(all_properties_data)
 
 # Save the data
-df.to_csv('bayut_simple_data.csv', index=False)
-print("Data saved to 'bayut_simple_data.csv'")
+df.to_csv('clean_data/cleanedDB.csv', index=False)
+print("Data saved to 'Clean_data' folder ")
 
-# Display the DataFrame (like tutor's final line)
-df
